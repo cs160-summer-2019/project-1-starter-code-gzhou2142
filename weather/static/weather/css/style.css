@@ -1,3 +1,8 @@
 li {
-    color: green;
+  color: green;
+}
+
+#setting {
+  margin-left: 2%;
+  margin-top: 2%;
 }
