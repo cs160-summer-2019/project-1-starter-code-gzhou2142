@@ -2,7 +2,136 @@ li {
   color: green;
 }
 
+body {
+  background-color: #17252a;
+}
+
 #setting {
-  margin-left: 2%;
-  margin-top: 2%;
+  background-color: #3aafa9;
+  margin-left: 4%;
+  margin-top: 3%;
+  position:fixed;
+  width: 6rem;
+  height: 6rem;
+}
+
+#setting-icon {
+  fill: currentColor;
+  width: 50px;
+  height: 50px;
+}
+
+#hamburger {
+  background-color: #3aafa9;
+  position: fixed;
+  bottom: 0;
+  margin-left: 4%;
+  margin-bottom: 3%;
+  width: 6rem;
+  height: 6rem;
+}
+
+#hamburger-icon {
+  fill: currentColor;
+  width: 50px;
+  height: 50px;
+}
+
+#graph {
+  background-color: #3aafa9;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 4%;
+  margin-bottom: 3%;
+  width: 6rem;
+  height: 6rem;
+}
+
+#graph-icon {
+  fill: currentColor;
+  width: 50px;
+  height: 50px;
+}
+
+.btn-md{
+  border-radius:15px
+}
+
+.weather-tabs{
+  position:fixed;
+  top:8%;
+  bottom:8%;
+}
+
+
+
+.rectangle {
+  
+  margin-top: 4%;
+  margin-left: 3%;
+  margin-right: 3%; 
+  background-color: #3aafa9;
+  width: 94%;
+  height: 15em;
+  border-radius: 25px;
+  box-shadow: 1px 5px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.alert {
+  background-color: #f76c6c;
+  margin-bottom:0%;
+  
+}
+.city {
+  float: left;
+  width: 33.33%;
+  padding: 20px 10px;
+  text-align: left;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
+
+.city-name {
+  float: left;
+  text-align: left;
+  margin-left: 4%;
+  width: 41%;
+  font-size: 5rem;
+  color: #feffff;
+  font-weight: bold;
+}
+
+.weather-icon {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  float: left;
+  text-align: center;
+}
+
+#weather-alert{
+  width: 6rem;
+  height: 6rem;
+}
+
+.temperature {
+  float: left;
+  text-align: right;
+  width: 41%;
+  margin-right: 3%;
+  font-size: 3rem;
+  color: #feffff;
+  font-weight: bold;
+  
+}
+
+.chance {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.row {
+  bottom:50px;
 }

@@ -1,15 +1,81 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Comparison</title>
-	
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
 
+<head>
+  <title>Forecast</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  <link href="/static/open-iconic/font/css/open-iconic.css" rel="stylesheet">
 </head>
+
 <body>
-	<!-- your comparison interface here -->
+  <!-- your single-location forecast interface here -->
+  <button type="button" id="setting" class="btn btn-primary btn-md">
+      <img src="/static/open-iconic/svg/cog.svg" id = "setting-icon" alt="icon name">
+      </button>
+  <div class="weather-tabs">
+    <div class="col-12">
+      <button type="button" class="btn btn-primary btn-lg rectangle">
+               <div class="row">
+                  <div  class = "city-name" >
+                     <p>Berkeley</p>
+                  </div>
+                  <div id = "weather-icon" >
+                     <div id = "weather">
+                        <img src="/static/open-iconic/svg/sun.svg" class= "weather-icon" alt="icon name">
+                     </div>
+                  </div>
+                  <div class = "temperature">
+                     <div class="temp">
+                        <p>
+                           76 Celcius
+                        </p>
+                     </div>
+                     <div class = "chance">
+                        <p>
+                           chance of rain: 10%
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </button>
+      <button type="button" class="btn btn-primary btn-lg rectangle">
+               <div class="row">
+                  <div  class = "city-name" >
+                     <p>Fremont</p>
+                  </div>
+                  <div id = "weather-icon" >
+                     <div id = "weather">
+                        <img src="/static/open-iconic/svg/cloudy.svg" class= "weather-icon" alt="icon name">
+                     </div>
+                  </div>
+                  <div class = "temperature">
+                     <div class="temp">
+                        <p>
+                           67 Celcius
+                        </p>
+                     </div>
+                     <div class = "chance">
+                        <p>
+                           chance of rain: 50%
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </button>
+
+
+
+    </div>
+  </div>
+  <button type="button" id="hamburger" class="btn btn-primary btn-md">
+      <img src="/static/open-iconic/svg/menu.svg" id = "hamburger-icon" alt="icon name">
+      </button>
+  <button type="button" id="graph" class="btn btn-primary btn-md">
+      <img src="/static/open-iconic/svg/graph.svg" id = "graph-icon" alt="icon name">
+      </button>
+
 </body>
+
 </html>
