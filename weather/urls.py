@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('forecast/', views.forecast, name='forecast'),
+    path('san-jose/', views.forecast, name='san-jose'),
     path('forecast/alert/', views.forecast_alert, name='forecast_alert'),
     path('comparison/', views.comparison, name='comparison'),
     path('comparison/alert/', views.comparison_alert, name='comparison_alert'),

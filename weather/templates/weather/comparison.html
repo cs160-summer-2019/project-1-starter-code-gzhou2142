@@ -1,20 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Forecast</title>
-      <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-      <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-      <link href="/static/open-iconic/font/css/open-iconic.css" rel="stylesheet">
-   </head>
-   <body>
-      <!-- your single-location forecast interface here -->
-      <button type="button" id="setting" class="btn btn-primary btn-md">
+
+<head>
+  <title>Forecast</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  <link href="/static/open-iconic/font/css/open-iconic.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- your single-location forecast interface here -->
+
+  <button type="button" id="setting" value="OFF" class="btn btn-primary btn-md">
       <img src="/static/open-iconic/svg/cog.svg" id = "setting-icon" alt="icon name">
       </button>
-      <div class="weather-tabs">
-         <div class="col-12">
-            <button type="button" class="btn btn-primary btn-lg rectangle">
+
+  <div class="weather-tabs">
+    <div class="col-12">
+      <button type="button" id="berkeley"  class="btn btn-primary btn-lg rectangle">
                <div class="row">
                   <div  class = "city-name" >
                      <p>Berkeley</p>
@@ -28,7 +32,7 @@
                      </div>
                   </div>
                   <div class = "temperature">
-                     <div class="temp">
+                     <div class="temp" id = "berkeley-temp">
                         <p>
                            28 &#8451;
                         </p>
@@ -41,10 +45,11 @@
                   </div>
                </div>
             </button>
-            <button type="button" class="btn btn-primary btn-lg rectangle">
+
+      <button type="button" id="san-jose" class="btn btn-primary btn-lg rectangle">
                <div class="row">
                   <div  class = "city-name" >
-                     <p>Fremont</p>
+                     <p>San Jose</p>
                   </div>
                   <div id = "weather-icon" >
                      <div id = "weather">
@@ -55,7 +60,7 @@
                      </div>
                   </div>
                   <div class = "temperature">
-                     <div class="temp">
+                     <div class="temp" id = "san-jose-temp">
                         <p>
                            22 &#8451;
                         </p>
@@ -68,13 +73,33 @@
                   </div>
                </div>
             </button>
-         </div>
-      </div>
-      <button type="button" id="hamburger" class="btn btn-primary btn-md">
+    </div>
+  </div>
+  <button type="button" id="hamburger" class="btn btn-primary btn-md">
       <img src="/static/open-iconic/svg/menu.svg" id = "hamburger-icon" alt="icon name">
       </button>
-      <button type="button" id="graph" class="btn btn-primary btn-md">
+  <button type="button" id="graph" class="btn btn-primary btn-md">
       <img src="/static/open-iconic/svg/graph.svg" id = "graph-icon" alt="icon name">
       </button>
-   </body>
+</body>
+<script type="text/javascript">
+  document.getElementById("berkeley").onclick = function() {
+    location.href = "/weather/forecast/";
+  };
+  document.getElementById("setting").onclick = function() {
+    if (document.getElementById("setting").value == "OFF") {
+      document.getElementById("setting").value = "ON";
+      document.getElementById("berkeley-temp").innerHTML = "83 &#8457;"
+       document.getElementById("san-jose-temp").innerHTML = "72 &#8457;"
+    } else if (document.getElementById("setting").value == "ON") {
+      document.getElementById("setting").value = "OFF";
+      document.getElementById("berkeley-temp").innerHTML = "28 &#8451;";
+      document.getElementById("san-jose-temp").innerHTML = "22 &#8451;"
+    }
+  };
+  document.getElementById("san-jose").onclick = function() {
+    location.href = "/weather/san-jose/";
+  };
+</script>
+
 </html>
