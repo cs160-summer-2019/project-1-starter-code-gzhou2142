@@ -1,35 +1,36 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>Forecast</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-  <link href="/static/open-iconic/font/css/open-iconic.css" rel="stylesheet">
-</head>
-
-<body>
-  <!-- your single-location forecast interface here -->
-  <button type="button" id="setting" class="btn btn-primary btn-md">
+   <head>
+      <title>Forecast</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+      <link href="/static/open-iconic/font/css/open-iconic.css" rel="stylesheet">
+   </head>
+   <body>
+      <!-- your single-location forecast interface here -->
+      <button type="button" id="setting" class="btn btn-primary btn-md">
       <img src="/static/open-iconic/svg/cog.svg" id = "setting-icon" alt="icon name">
       </button>
-  <div class="weather-tabs">
-    <div class="col-12">
-      <button type="button" class="btn btn-primary btn-lg rectangle">
+      <div class="weather-tabs">
+         <div class="col-12">
+            <button type="button" class="btn btn-primary btn-lg rectangle">
                <div class="row">
                   <div  class = "city-name" >
                      <p>Berkeley</p>
                   </div>
                   <div id = "weather-icon" >
                      <div id = "weather">
-                        <img src="/static/open-iconic/svg/sun.svg" class= "weather-icon" alt="icon name">
+                        <svg class = "m-weather temp-text" xmlns="http://www.w3.org/2000/svg" width=5rem height=5rem viewBox="0 0 8 8">
+                           <path d="M4 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm5 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-3.5 1.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm7 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-6 2.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm5 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-2.5 1c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5z"
+                              />
+                        </svg>
                      </div>
                   </div>
                   <div class = "temperature">
                      <div class="temp">
                         <p>
-                           76 Celcius
+                           28 &#8451;
                         </p>
                      </div>
                      <div class = "chance">
@@ -40,20 +41,23 @@
                   </div>
                </div>
             </button>
-      <button type="button" class="btn btn-primary btn-lg rectangle">
+            <button type="button" class="btn btn-primary btn-lg rectangle">
                <div class="row">
                   <div  class = "city-name" >
                      <p>Fremont</p>
                   </div>
                   <div id = "weather-icon" >
                      <div id = "weather">
-                        <img src="/static/open-iconic/svg/cloudy.svg" class= "weather-icon" alt="icon name">
+                        <svg class = "m-cloud temp-text" xmlns="http://www.w3.org/2000/svg" width=5rem height=5rem viewBox="0 0 8 8">
+                           <path d="M2.5 0c-1.38 0-2.5 1.12-2.5 2.5 0 .39.09.74.25 1.06.3-.21.64-.37 1-.47.55-1.25 1.82-2.09 3.25-2.09-.46-.6-1.18-1-2-1zm2 2c-1.21 0-2.27.86-2.5 2-1.1 0-2 .9-2 2s.9 2 2 2h4.5c.83 0 1.5-.67 1.5-1.5 0-.65-.42-1.29-1-1.5v-.5c0-1.38-1.12-2.5-2.5-2.5z"
+                              />
+                        </svg>
                      </div>
                   </div>
                   <div class = "temperature">
                      <div class="temp">
                         <p>
-                           67 Celcius
+                           22 &#8451;
                         </p>
                      </div>
                      <div class = "chance">
@@ -64,18 +68,13 @@
                   </div>
                </div>
             </button>
-
-
-
-    </div>
-  </div>
-  <button type="button" id="hamburger" class="btn btn-primary btn-md">
+         </div>
+      </div>
+      <button type="button" id="hamburger" class="btn btn-primary btn-md">
       <img src="/static/open-iconic/svg/menu.svg" id = "hamburger-icon" alt="icon name">
       </button>
-  <button type="button" id="graph" class="btn btn-primary btn-md">
+      <button type="button" id="graph" class="btn btn-primary btn-md">
       <img src="/static/open-iconic/svg/graph.svg" id = "graph-icon" alt="icon name">
       </button>
-
-</body>
-
+   </body>
 </html>
